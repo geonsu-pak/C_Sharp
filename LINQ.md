@@ -14,3 +14,12 @@ var m = A.Skip(1).Zip(A, (curr, prev) => curr + prev).ToList();
 <pre>        
 var m = A.Skip(1).Select((x, index) => x + A[index]).ToList();
 </pre>
+
+## Array(or List) 를 작은 리스트로 분리
+<pre>
+while (A.Any())
+{
+  var AA = A.Take(2).ToList();
+  A = A.Skip(2).ToList();
+}
+</pre>
